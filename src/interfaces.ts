@@ -17,7 +17,7 @@ export type TRenderDayProps = (params: TRenderCellProps) => ReactElement;
 
 export type TRenderWeekProps = (params: TRenderCellProps & {index: number}) => ReactElement;
 
-export type TRenderLayoutProps = (currentDate) => ReactElement;
+export type TRenderLayoutProps = (currentDate:Dayjs) => ReactElement;
 
 export type TRenderAllCellProp = (dt: Dayjs) => JSX.Element[];
 

@@ -9,7 +9,8 @@
     "pre": "npm install react react-dom @babel/core @babel/cli @talentui/webpack-config@beta @talentui/get-babel-config webpack webpack-cli webpack-dev-server --save-dev",
     "build": "NODE_ENV=production babel ./src --out-dir lib --extensions \".ts,.tsx\" --copy-files",
     "types": "tsc --emitDeclarationOnly",
-    "checkout": "git checkout-index --prefix=../<name>/ -a"
+    "checkout": "git checkout-index --prefix=../<name>/ -a",
+    "prepublish": "rm -rf lib/* && npm run types && npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,7 @@
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/react-router-dom": "^4.3.3",
-    "@types/styled-components": "^4.1.16",
+    "@types/styled-components": "4.1.8",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
     "react": "^16.8.6",
@@ -50,5 +51,8 @@
     "@beisen-phoenix/icon": "^1.0.20",
     "@beisen-phoenix/style-token": "^1.0.38",
     "dayjs": "^1.8.14"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
