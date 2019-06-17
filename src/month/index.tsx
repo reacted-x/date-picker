@@ -16,7 +16,7 @@ export const Month: React.FunctionComponent<IDayProps> = ({
   renderFoot,
   renderHead,
   showCurrent=true,
-  currentText="本年",
+  currentText="本月",
   size=260
 }) => {
 

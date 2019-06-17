@@ -16,7 +16,7 @@ export const Week: React.FunctionComponent<IWeekProps> = ({
   renderFoot,
   renderHead,
   showCurrent=true,
-  currentText="本月",
+  currentText="本周",
   size=260,
   renderCells
 }) => {
