@@ -24,7 +24,7 @@ export const Week: React.FunctionComponent<IWeekProps> = ({
 
   //重置时间为今天
   const handleReset = useCallback(() => {
-    if (typeof onChange === 'function') onChange(dayjs());
+    if (typeof onSelect === 'function') onSelect(dayjs(),  -1);
   }, []);
 
   const fixedRange = useRange(dateRange);

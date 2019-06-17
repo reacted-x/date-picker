@@ -25,6 +25,7 @@ export default () => {
             dateRange={dateRange}  
             onChange={setDate}
             value={date}
+            onSelect={handleDateClick}
             />
         </div>
         <div style={{ float: 'left' }}>
@@ -32,6 +33,7 @@ export default () => {
             dateRange={dateRange}  
             onChange={setDate}
             value={date}
+            onSelect={handleDateClick}
             />
         </div>
       </div>

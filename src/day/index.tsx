@@ -26,7 +26,7 @@ export const Day: React.FunctionComponent<IDayProps> = ({
 
   //重置时间为今天
   const handleReset = useCallback(() => {
-    if (typeof onChange === 'function') onChange(dayjs());
+    if (typeof onSelect === 'function') onSelect(dayjs());
   }, []);
 
   const fixedRange = useRange(dateRange);

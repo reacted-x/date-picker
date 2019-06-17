@@ -7,10 +7,11 @@
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pre": "npm install react react-dom @babel/core @babel/cli @talentui/webpack-config@beta @talentui/get-babel-config webpack webpack-cli webpack-dev-server --save-dev",
-    "build": "NODE_ENV=production babel ./src --out-dir lib --extensions \".ts,.tsx\" --copy-files",
+    "compile": "NODE_ENV=production babel ./src --out-dir lib --extensions \".ts,.tsx\" --copy-files",
     "types": "tsc --emitDeclarationOnly",
+    "lib": "rm -rf lib/* && npm run types && npm run compile",
     "checkout": "git checkout-index --prefix=../<name>/ -a",
-    "prepublish": "rm -rf lib/* && npm run types && npm run build"
+    "prepublish": "npm run lib"
   },
   "repository": {
     "type": "git",
