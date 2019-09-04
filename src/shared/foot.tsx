@@ -19,7 +19,7 @@ const DayFoot: React.FunctionComponent<{
 
   return (
     <SCDayFootWrap>
-      <SCDayFootBox>
+      <SCDayFootBox hasCustomEl={!!footEls}>
         {showCurrent && <SCToday onClick={onReset}>{currentText}</SCToday>}
         {footEls}
       </SCDayFootBox>

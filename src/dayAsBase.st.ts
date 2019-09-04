@@ -75,7 +75,8 @@ export const DayWrap = styled.div<{ width: number }>`
 
 export const SCToday = styled.span`
   color: ${$S3};
-  float: left;
+  display:inline-block;
+  vertical-align:super;
   ${$Fs1};
   cursor: pointer;
 `;
@@ -142,9 +143,11 @@ export const SCDayFootWrap = styled.div`
   padding-top: ${$Sp5};
 `;
 
-export const SCDayFootBox = styled.div`
+export const SCDayFootBox = styled.div<{hasCustomEl:boolean}>`
+  height:20px;
   position: relative;
   color: ${$M3};
+  text-align: ${props => props.hasCustomEl ? 'left': 'center'};
   ${CSSBFC}
 `;
 
